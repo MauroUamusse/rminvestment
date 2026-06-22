@@ -7,7 +7,7 @@
 <meta name="keywords" content="admin, estimates, bootstrap, business, corporate, creative, invoice, html5, responsive, Projects">
 <meta name="author" content="Dreamguys - Bootstrap Admin Template">
 <meta name="robots" content="noindex, nofollow">
-<title>CONTA BANCARIA</title>
+<title>CASA</title>
 
 <link rel="shortcut icon" type="image/x-icon" href="assets/img/logo02.jpg">
 
@@ -128,6 +128,7 @@
 <li class="submenu">
 <a href="javascript:void(0);"><img src="assets/img/icons/expense1.svg" alt="img"><span> Conta Bancaria</span> <span class="menu-arrow"></span></a>
 <ul>
+<li><a href="cadastrarcontabancaria.html">Cadastrar Contas</a></li>
 <li><a href="listarcontabancaria.html">Listar Contas</a></li>
 </ul>
 </li>
@@ -147,13 +148,6 @@
 </ul>
 </li>
 
-<li class="submenu">
-<a href="javascript:void(0);"><img src="assets/img/icons/product.svg" alt="img"><span> Casas</span> <span class="menu-arrow"></span></a>
-<ul>
-<li><a href="cadastrarcasa.html">Cadastrar</a></li>
-<li><a href="listarcasa.html">Listar</a></li>
-</ul>
-</li>
 
 <li class="submenu">
 <a href="javascript:void(0);"><img src="assets/img/icons/quotation1.svg" alt="img"><span> Serviços</span> <span class="menu-arrow"></span></a>
@@ -208,79 +202,197 @@
 </div>
 </div>
 
+
 <div class="page-wrapper">
 <div class="content">
 <div class="page-header">
 <div class="page-title">
-<h4>Conta Bancaria</h4>
+<h4>Lista das Casas</h4>
+</div>
+<div class="page-btn">
+<a href="cadastrarcasa.html" class="btn btn-added"><img src="assets/img/icons/plus.svg" class="me-2" alt="img">Cadastrar Nova Casa</a>
 </div>
 </div>
+
 <div class="card">
 <div class="card-body">
+<div class="table-top">
+<div class="search-set">
+<div class="search-path">
+<a class="btn btn-filter" id="filter_search">
+<img src="assets/img/icons/filter.svg" alt="img">
+<span><img src="assets/img/icons/closes.svg" alt="img"></span>
+</a>
+</div>
+<div class="search-input">
+<a class="btn btn-searchset">
+<img src="assets/img/icons/search-white.svg" alt="img">
+</a>
+</div>
+</div>
+<div class="wordset">
+<ul>
+<li>
+<a data-bs-toggle="tooltip" data-bs-placement="top" title="pdf"><img src="assets/img/icons/pdf.svg" alt="img"></a>
+</li>
+<li>
+<a data-bs-toggle="tooltip" data-bs-placement="top" title="excel"><img src="assets/img/icons/excel.svg" alt="img"></a>
+</li>
+<li>
+<a data-bs-toggle="tooltip" data-bs-placement="top" title="print"><img src="assets/img/icons/printer.svg" alt="img"></a>
+</li>
+</ul>
+</div>
+</div>
+
+<div class="card" id="filter_inputs">
+<div class="card-body pb-0">
 <div class="row">
-<div class="col-lg-3 col-sm-6 col-12">
+<div class="col-lg-2 col-sm-6 col-12">
 <div class="form-group">
-<label>Nome do Banco</label>
-<input type="text" value="">
+<div class="input-groupicon">
+<input type="text" class="datetimepicker cal-icon" placeholder="Choose Date">
+<div class="addonset">
+<img src="assets/img/icons/calendars.svg" alt="img">
 </div>
 </div>
-<div class="col-lg-3 col-sm-6 col-12">
+</div>
+</div>
+<div class="col-lg-2 col-sm-6 col-12">
 <div class="form-group">
-<label>Numero de Conta</label>
-<input type="text" value="">
+<input type="text" placeholder="Enter Reference">
 </div>
 </div>
-<div class="col-lg-3 col-sm-6 col-12">
+<div class="col-lg-2 col-sm-6 col-12">
 <div class="form-group">
-<label>NIB</label>
-<input type="text" value="">
+<select class="select">
+<option>Categoria</option>
+<option>Computador</option>
+</select>
 </div>
 </div>
-<div class="col-lg-3 col-sm-6 col-12">
+<div class="col-lg-2 col-sm-6 col-12">
 <div class="form-group">
-<label>SWIFT</label>
-<input type="text" value="">
+<select class="select">
+<option>Estado</option>
+<option>Completo</option>
+<option>Em Progresso</option>
+</select>
 </div>
 </div>
-<div class="col-lg-3 col-sm-6 col-12">
+<div class="col-lg-1 col-sm-6 col-12 ms-auto">
 <div class="form-group">
-<label>Balcão</label>
-<input type="text" value="">
+<a class="btn btn-filters ms-auto"><img src="assets/img/icons/search-whites.svg" alt="img"></a>
 </div>
 </div>
-<div class="col-lg-3 col-sm-6 col-12">
-<div class="form-group">
-<label>Gerente</label>
-<input type="text" value="">
 </div>
-</div>
-<div class="col-lg-3 col-sm-6 col-12">
-<div class="form-group">
-<label>Email</label>
-<input type="text" value="">
-</div>
-</div>
-<div class="col-lg-3 col-sm-6 col-12">
-<div class="form-group">
-<label>Telefone</label>
-<input type="text" value="">
-</div>
-</div>
-<div class="col-lg-3 col-sm-6 col-12">
-<div class="form-group">
-<label>PIN</label>
-<input type="text" value="">
 </div>
 </div>
 
+<div class="table-responsive">
+ <table class="table  datanew">
+<thead>
+<tr>
+<th>
+<label class="checkboxs">
+<input type="checkbox" id="select-all">
+<span class="checkmarks"></span>
+</label>
+</th>
+<th>Numero de Compartimentos</th>
+<th>Valor da Renda</th>
+<th>Nome da Casa</th>
+<th>Numero da Casa</th>
+<th>Quarteirão</th>
+<th>Estado</th>
+<th>Localização</th>
+<th>Ações</th>
+</tr>
+</thead>
+<tbody>
 
-<div class="col-lg-12">
-<a href="javascript:void(0);" class="btn btn-submit me-2">Cadastrar</a>
-<a href="expenselist.html" class="btn btn-cancel">Cancelar</a>
+<tr>
+<td>
+<label class="checkboxs">
+<input type="checkbox">
+<span class="checkmarks"></span>
+</label>
+</td>
+<td>Tipo 3</td>
+<td>24,500.00</td>
+<td>A1</td>
+<td>125</td>
+<td>43</td>
+<td><span class="badges bg-lightgreen">Disponivel</span></td>
+<td>Bairro Malhampsene</td>
+<td>
+<a class="me-3" href="editexpense.html">
+<img src="assets/img/icons/edit.svg" alt="img">
+</a>
+<a class="me-3 confirm-text" href="javascript:void(0);">
+<img src="assets/img/icons/delete.svg" alt="img">
+</a>
+</td>
+</tr>
+
+
+<tr>
+<td>
+<label class="checkboxs">
+<input type="checkbox">
+<span class="checkmarks"></span>
+</label>
+</td>
+<td>Tipo 4</td>
+<td>34,500.00</td>
+<td>A11</td>
+<td>123</td>
+<td>43</td>
+<td><span class="badges bg-lightgreen">Ocupada</span></td>
+<td>Bairro Malhampsene</td>
+<td>
+<a class="me-3" href="editexpense.html">
+<img src="assets/img/icons/edit.svg" alt="img">
+</a>
+<a class="me-3 confirm-text" href="javascript:void(0);">
+<img src="assets/img/icons/delete.svg" alt="img">
+</a>
+</td>
+</tr>
+
+<tr>
+<td>
+<label class="checkboxs">
+<input type="checkbox">
+<span class="checkmarks"></span>
+</label>
+</td>
+<td>Tipo 2</td>
+<td>14,500.00</td>
+<td>B1</td>
+<td>70</td>
+<td>4</td>
+<td><span class="badges bg-lightgreen">Em Manutencao</span></td>
+<td>Bairro Mavalane</td>
+<td>
+<a class="me-3" href="editexpense.html">
+<img src="assets/img/icons/edit.svg" alt="img">
+</a>
+<a class="me-3 confirm-text" href="javascript:void(0);">
+<img src="assets/img/icons/delete.svg" alt="img">
+</a>
+</td>
+</tr>
+
+
+
+
+</tbody>
+</table>
 </div>
 </div>
 </div>
-</div>
+
 </div>
 </div>
 </div>
@@ -297,8 +409,13 @@
 
 <script src="assets/js/bootstrap.bundle.min.js"></script>
 
-<script src="assets/plugins/apexchart/apexcharts.min.js"></script>
-<script src="assets/plugins/apexchart/chart-data.js"></script>
+<script src="assets/js/moment.min.js"></script>
+<script src="assets/js/bootstrap-datetimepicker.min.js"></script>
+
+<script src="assets/plugins/select2/js/select2.min.js"></script>
+
+<script src="assets/plugins/sweetalert/sweetalert2.all.min.js"></script>
+<script src="assets/plugins/sweetalert/sweetalerts.min.js"></script>
 
 <script src="assets/js/script.js"></script>
 </body>
